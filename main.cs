@@ -3,7 +3,7 @@ using System;
 class Program {
   public static void Main (string[] args) {
     string nome, entrada;
-    double n1, n2, n3, medexcer, media, A;
+    double n1, n2, n3, medexcer, media, A, B, C, D;
   
     Console.WriteLine ("Digite o nome do aluno: ");
 
@@ -19,8 +19,6 @@ class Program {
     
     entrada = Console.ReadLine();
 
-    //Função para converter texto em decimal, pois toda entrada possui o formato em texto por padrão.
-
     n1 = Double.Parse(entrada);
 
     Console.WriteLine ("Digite a segunda nota ");
@@ -35,21 +33,30 @@ class Program {
     
     n3 = Double.Parse(entrada);
     
-    media = (n1 + n2 *2 + n3 * 3 + medexcer) / 7;
+    media = ((n1 + n2 *2 + n3 * 3 + medexcer) / 7);
 
-    if (media >= 9.0);
+    if (media >= 9.0)
     {
-      A = (media);
-      Console.WriteLine (" O Aluno(a) " + nome + "Foi teve sua mèdia" + A);
-    
+      Console.WriteLine (" O Aluno(a) " + nome + " teve sua mèdia A ");
+    }
     else
-      if ((media >= 7.5) && (media < 9.0));
-    {
-      A = (media);
-      Console.WriteLine (" O Aluno(a) " + nome + "Foi teve sua mèdia" + A);
-
       
-      }
-    Console.WriteLine ("A média da nota do aluno(a) " + nome + " é de " + media);
+      if ((media >= 7.5) && (media < 9.0))
+      {
+      Console.WriteLine (" O Aluno(a) " + nome + " teve sua mèdia B ");
+        }
+    else
+        
+      if ((media >= 6.0) && (media < 7.5))
+        {
+      Console.WriteLine (" O Aluno(a) " + nome + " teve sua mèdia C ");
+        }
+          
+     else
+          
+      if (media < 6.0)
+         {
+      Console.WriteLine (" O Aluno(a) " + nome + " teve sua mèdia D ");
+        }
   }
 }
